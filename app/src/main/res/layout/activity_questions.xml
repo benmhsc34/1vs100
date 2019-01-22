@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f12"
+    tools:context=".QuestionsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/rounder_cornes_questions">
+
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/backbuttonblue"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+
+        <TextView
+            android:id="@+id/textViewOfCountry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rounder_cornes_questions"
+            android:gravity="center"
+            android:text="1vs100"
+            android:textColor="#f12"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/imageViewOfFlag"
+            android:layout_width="91dp"
+            android:layout_height="51dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text=" ← "
+        android:textColor="#FFF"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/LL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+
+            <TextView
+                android:id="@+id/questionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounder_cornes_questions1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Question?"
+                android:textColor="#696969"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/LL1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/activity_game_answer1_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounder_cornes_questions1"
+                        android:padding="4dp"
+                        android:text="Answer1"
+                        android:textColor="#696969"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/activity_game_answer3_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounder_cornes_questions1"
+                        android:padding="4dp"
+                        android:text="Answer3"
+                        android:textColor="#696969"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/activity_game_answer4_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounder_cornes_questions1"
+                        android:padding="4dp"
+                        android:text="Answer4"
+                        android:textColor="#696969"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/activity_game_answer2_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounder_cornes_questions1"
+                        android:padding="4dp"
+                        android:text="Answer2"
+                        android:textColor="#696969"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/questionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/LL"
+            android:layout_alignEnd="@+id/LL"
+            android:layout_alignRight="@+id/LL"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/lato"
+            android:text="100 remaining"
+            android:textColor="#696969"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp" />
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

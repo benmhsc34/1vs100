@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "301893690890",
+    "firebase_url": "https://vs100-31e23.firebaseio.com",
+    "project_id": "vs100-31e23",
+    "storage_bucket": "vs100-31e23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301893690890:android:13cab39d8a2a6dee",
+        "android_client_info": {
+          "package_name": "com.example.enzo.a1vs100"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301893690890-hcck6j4p5s5cpr0sfpbn0jc5j7pbv77m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEcauGQCf61nkUekp-HzIlD9mDHRqTlSM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

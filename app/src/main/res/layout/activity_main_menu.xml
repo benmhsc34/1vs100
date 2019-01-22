@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenuActivity"
+    android:background="#000">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_settings_logo" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/bigLogo"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/relativeLayoutSettings"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_settings_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bigLogo"
+            android:gravity="center"
+            android:text="1vs100 ®"
+            android:textColor="#FFF"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:layout_marginTop="35dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/playButtonLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bigLogo"
+            android:layout_marginTop="70dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <Button
+                android:id="@+id/playButton"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/rounder_cornes_questions_green"
+                android:fontFamily="@font/lato"
+                android:text="START"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/statsButtonLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playButtonLL"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/rounder_cornes_questions_green"
+                android:fontFamily="@font/lato"
+                android:text="Statistics"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/statsButtonLL"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:weightSum="2">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounder_cornes_questions_green"
+                android:fontFamily="@font/lato"
+                android:text="More Apps"
+                android:textColor="#000" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounder_cornes_questions_green"
+                android:fontFamily="@font/lato"
+                android:text="Rate us"
+                android:textColor="#000" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
