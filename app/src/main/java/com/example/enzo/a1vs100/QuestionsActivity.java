@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +38,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class QuestionsActivity extends AppCompatActivity implements View.OnClickListener {
@@ -79,6 +82,8 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         FirebaseApp.initializeApp(this);
 
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences mPreferences = getSharedPreferences("SHARED", MODE_PRIVATE);
+        mPreferences.edit().putInt("oldRemaining", 100).apply();
 
         questionNumber = findViewById(R.id.questionNumber);
 
@@ -87,12 +92,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         String str = intent.getStringExtra("countryName");
 
         Button backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+        backButton.setOnClickListener(view -> onBackPressed());
 
 
         ImageView imageView = findViewById(R.id.imageViewOfFlag);
@@ -170,14 +170,19 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
             // Good answer diminuer nombre restant
             if (remaining > 10) {
 
-                remaining = remaining - ((mCurrentQuestion.getPercentage() * remaining)/100);
-                Toast.makeText(this, remaining+"", Toast.LENGTH_SHORT).show();
+                remaining = remaining - ((mCurrentQuestion.getPercentage() * remaining) / 100);
             } else {
                 Random r = new Random();
                 int i1 = r.nextInt(remaining + 1);
                 remaining = i1;
 
             }
+            SharedPreferences mPreferences = getSharedPreferences("SHARED", MODE_PRIVATE);
+            mPreferences.edit().putInt("remaining", remaining).apply();
+
+            Intent myIntent = new Intent(QuestionsActivity.this, CorrectActivity.class);
+            myIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(myIntent);
         } else {
 
 
@@ -300,7 +305,6 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         myIntent.putExtra("image", number);
         QuestionActivity.this.startActivityForResult(myIntent, 0);
         */
-        Toast.makeText(this, "DONE", Toast.LENGTH_SHORT).show();
         finish();
 
 
@@ -308,11 +312,22 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
 
     private void displayQuestion(final Question question) {
-        mQuestionTextView.setText(question.getQuestion());
-        mAnswerButton1.setText(question.getChoiceList().get(0).trim());
-        mAnswerButton2.setText(question.getChoiceList().get(1).trim());
-        mAnswerButton3.setText(question.getChoiceList().get(2).trim());
-        mAnswerButton4.setText(question.getChoiceList().get(3).trim());
+        setQuestionSlowly(question.getQuestion());
+
+        mAnswerButton1.setText("");
+        mAnswerButton2.setText("");
+        mAnswerButton3.setText("");
+        mAnswerButton4.setText("");
+
+        //   mQuestionTextView.setText(question.getQuestion());
+        final Handler handler = new Handler();
+        handler.postDelayed(() -> mAnswerButton1.setText(question.getChoiceList().get(0).trim()), 3000);
+        handler.postDelayed(() -> mAnswerButton4.setText(question.getChoiceList().get(3).trim()), 3500);
+        handler.postDelayed(() -> mAnswerButton3.setText(question.getChoiceList().get(2).trim()), 4000);
+        handler.postDelayed(() -> mAnswerButton2.setText(question.getChoiceList().get(1).trim()), 4500);
+//        mAnswerButton2.setText(question.getChoiceList().get(1).trim());
+//        mAnswerButton3.setText(question.getChoiceList().get(2).trim());
+//        mAnswerButton4.setText(question.getChoiceList().get(3).trim());
     }
 
 
@@ -379,5 +394,35 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         }
         return new QuestionBank(questionList);
 
+    }
+
+    public void setQuestionSlowly(final String s) {
+        TextView tv = findViewById(R.id.questionTextView);
+        tv.setText("");
+        final int[] i = new int[1];
+        i[0] = 0;
+        final int length = s.length();
+        @SuppressLint("HandlerLeak") final Handler handler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                char c = s.charAt(i[0]);
+                Log.d("Strange", "" + c);
+                tv.append(String.valueOf(c));
+                i[0]++;
+            }
+        };
+
+        final Timer timer = new Timer();
+        TimerTask taskEverySplitSecond = new TimerTask() {
+            @Override
+            public void run() {
+                handler.sendEmptyMessage(0);
+                if (i[0] == length - 1) {
+                    timer.cancel();
+                }
+            }
+        };
+        timer.schedule(taskEverySplitSecond, 500, 50);
     }
 }

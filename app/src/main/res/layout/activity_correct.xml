@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".CorrectActivity">
+
+    <TextView
+        android:id="@+id/thereAreNowTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="There are now"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/numberRemaining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thereAreNowTV"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="80sp"
+        android:text="100" />
+    <TextView
+        android:id="@+id/remaining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberRemaining"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:text="players remaining" />
+
+</RelativeLayout>

@@ -1,9 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".ResultActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/rounder_cornes_questions">
+
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/backbuttonblue"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+
+        <TextView
+            android:id="@+id/textViewOfCountry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/imageViewOfFlag"
+            android:layout_width="91dp"
+            android:layout_height="51dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text=" ← "
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/youWin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="You won!"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/numberOfWinsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/youWin"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:text="You have now won 4 times"
+        android:textSize="30sp" />
+    <!--
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/numberOfWinsTV"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/common_full_open_on_phone"
+
+            android:layout_marginLeft="50dp" />
+    -->
+</RelativeLayout>

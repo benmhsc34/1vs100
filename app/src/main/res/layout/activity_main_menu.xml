@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenuActivity"
-    android:background="#000">
+    android:background="#c11c10">
 
 
     <RelativeLayout
@@ -23,16 +23,16 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/ic_settings_logo" />
+                android:src="@drawable/ic_settings_blue" />
         </RelativeLayout>
 
         <ImageView
             android:id="@+id/bigLogo"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="220dp"
             android:layout_below="@id/relativeLayoutSettings"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_settings_logo" />
+            android:src="@drawable/logo" />
 
         <TextView
             android:layout_width="match_parent"
@@ -40,10 +40,11 @@
             android:layout_below="@id/bigLogo"
             android:gravity="center"
             android:text="1vs100 ®"
-            android:textColor="#FFF"
+            android:textColor="#209796"
             android:textStyle="italic"
             android:textSize="20dp"
-            android:layout_marginTop="35dp"/>
+            />
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
@@ -52,20 +53,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/bigLogo"
-            android:layout_marginTop="70dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp">
+            android:layout_marginTop="25dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp">
 
             <Button
                 android:id="@+id/playButton"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:background="@drawable/rounder_cornes_questions_green"
+                android:layout_height="140dp"
+                android:background="@drawable/rounder_cornes_questions_logo"
                 android:fontFamily="@font/lato"
                 android:text="START"
-                android:textAllCaps="false"
-                android:textColor="#000"
-                android:textSize="40sp" />
+                android:textColor="#c11c10"
+                android:textSize="60sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,16 +74,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/playButtonLL"
             android:layout_marginTop="5dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp">
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp">
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@drawable/rounder_cornes_questions_green"
+                android:layout_height="60dp"
+                android:background="@drawable/rounder_cornes_questions_logo"
                 android:fontFamily="@font/lato"
                 android:text="Statistics"
-                android:textColor="#000" />
+                android:textSize="30sp"
+                android:textColor="#c11c10" />
         </LinearLayout>
 
         <LinearLayout
@@ -91,8 +92,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/statsButtonLL"
             android:layout_marginTop="5dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
             android:weightSum="2">
 
             <Button
@@ -100,20 +101,22 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:background="@drawable/rounder_cornes_questions_green"
+                android:background="@drawable/rounder_cornes_questions_logo"
                 android:fontFamily="@font/lato"
+                android:textSize="20sp"
                 android:text="More Apps"
-                android:textColor="#000" />
+                android:textColor="#c11c10" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
-                android:background="@drawable/rounder_cornes_questions_green"
+                android:background="@drawable/rounder_cornes_questions_logo"
                 android:fontFamily="@font/lato"
                 android:text="Rate us"
-                android:textColor="#000" />
+                android:textSize="20sp"
+                android:textColor="#c11c10" />
 
         </LinearLayout>
 
