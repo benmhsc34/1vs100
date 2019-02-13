@@ -6,7 +6,7 @@
     "answer2": "2",
     "answer3": "6",
     "answerIndex": "0",
-    "percentage": "30"
+    "percentage": "29"
   }, {
     "question": "What is the seventh planet from the sun?",
     "answer0": "Mars",
@@ -14,7 +14,7 @@
     "answer2": "Jupiter",
     "answer3": "Uranus",
     "answerIndex": "3",
-    "percentage": "25"
+    "percentage": "55"
   }, {
     "question": "Which one is correct team name in NBA?",
     "answer0": "New York Bulls",
@@ -22,7 +22,7 @@
     "answer2": "Golden State Cheerios",
     "answer3": "Houston Rocket",
     "answerIndex": "3",
-    "percentage": "27"
+    "percentage": "30"
   }, {
     "question": "Which chess piece is of the lowest theoretical value?",
     "answer0": "Knight",
@@ -30,7 +30,7 @@
     "answer2": "Bishop",
     "answer3": "Pawn",
     "answerIndex": "3",
-    "percentage": "27"
+    "percentage": "28"
   }, {
     "question": "Who was the Greek goddess associated with the moon?",
     "answer0": "Apollo",
@@ -38,7 +38,7 @@
     "answer2": "Artemis",
     "answer3": "Uranus",
     "answerIndex": "0",
-    "percentage": "27"
+    "percentage": "25"
   }, {
     "question": "Which landlocked country is contained within another country?",
     "answer0": "Lesotho",
@@ -46,15 +46,15 @@
     "answer2": "Burkina Faso",
     "answer3": "Siberia",
     "answerIndex": "0",
-    "percentage": "27"
+    "percentage": "20"
   }, {
-    "question": "Who has the biggest number of subscribers on Instagram?",
+    "question": "Who has the biggest number of followers on Instagram?",
     "answer0": "Selena Gomez",
     "answer1": "World Record Egg",
     "answer2": "Cristiano Ronaldo",
     "answer3": "Post Malone",
     "answerIndex": "2",
-    "percentage": "27"
+    "percentage": "53"
   }, {
     "question": "What is Usain Bolt's world recored 100m run?",
     "answer0": "9.92",
@@ -62,7 +62,7 @@
     "answer2": "9.58",
     "answer3": "9.31",
     "answerIndex": "2",
-    "percentage": "27"
+    "percentage": "33"
   }, {
     "question": "What album is the top streamed album of all time on Spotify?",
     "answer0": "DAMN.",

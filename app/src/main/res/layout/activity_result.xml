@@ -75,8 +75,54 @@
         android:layout_below="@+id/youWin"
         android:layout_marginTop="150dp"
         android:gravity="center"
-        android:text="You have now won 4 times"
+        android:text="You have now won 4 times!"
         android:textSize="30sp" />
+
+
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/numberOfWinsTV"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="230dp"
+        android:src="@drawable/ic_share_black_24dp" />
+
+    <ImageView
+        android:id="@+id/tryAgain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/numberOfWinsTV"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/ic_replay_black_24dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share"
+        android:layout_alignStart="@+id/share"
+        android:layout_alignLeft="@+id/share"
+        android:layout_alignEnd="@+id/share"
+        android:layout_alignRight="@+id/share"
+        android:text="Flex on your friends!"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tryAgain"
+        android:layout_alignStart="@+id/tryAgain"
+        android:layout_alignLeft="@+id/tryAgain"
+        android:layout_alignEnd="@+id/tryAgain"
+        android:layout_alignRight="@+id/tryAgain"
+        android:text="Again?"
+        android:textAlignment="center"
+        android:textSize="16sp" />
     <!--
         <ImageView
             android:layout_width="wrap_content"

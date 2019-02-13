@@ -208,6 +208,11 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
             SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
             prefs.edit().putString("winorlose", "lose").apply();
             prefs.edit().putInt("remaining", remaining).apply();
+
+            int bestPosition = prefs.getInt("bestPosition", 100);
+            if (bestPosition > remaining) {
+                prefs.edit().putInt("bestPosition", remaining).apply();
+            }
             int numberOfGames = prefs.getInt("numberOfGames", 0);
             prefs.edit().putInt("numberOfGames", numberOfGames + 1).apply();
 
@@ -400,7 +405,6 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         TextView tv = findViewById(R.id.questionTextView);
         tv.setText("");
         final int[] i = new int[1];
-        i[0] = 0;
         final int length = s.length();
         @SuppressLint("HandlerLeak") final Handler handler = new Handler() {
             @Override

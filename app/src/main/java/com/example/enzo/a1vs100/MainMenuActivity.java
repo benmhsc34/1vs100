@@ -14,9 +14,15 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         Button playButton = findViewById(R.id.playButton);
+        Button statsButton = findViewById(R.id.statsButton);
 
         playButton.setOnClickListener(v -> {
             Intent myIntent = new Intent(MainMenuActivity.this, QuestionsActivity.class);
+            startActivity(myIntent);
+        });
+
+        statsButton.setOnClickListener(v -> {
+            Intent myIntent = new Intent(MainMenuActivity.this, StatsActivity.class);
             startActivity(myIntent);
         });
     }
