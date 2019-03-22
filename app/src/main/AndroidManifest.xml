@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     android:name=".1vs100"
-    package="com.example.enzo.a1vs100">
+    package="com.benja.blitzzer.onevshundred">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StatsActivity"></activity>
+        <activity android:name=".MoreAppsActivity"></activity>
+        <activity android:name=".StatsActivity" />
         <activity android:name=".CorrectActivity" />
         <activity android:name=".MainMenuActivity">
             <intent-filter>

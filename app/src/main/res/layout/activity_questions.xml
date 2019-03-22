@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f12"
+    android:background="@color/colorPrimary"
     tools:context=".QuestionsActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/rounder_cornes_questions">
+        android:background="@drawable/rounder_cornes_questions"
+        tools:ignore="MissingConstraints">
 
 
         <Button
@@ -34,7 +35,7 @@
             android:background="@drawable/rounder_cornes_questions"
             android:gravity="center"
             android:text="1vs100"
-            android:textColor="#f12"
+            android:textColor="@color/colorPrimary"
             android:textSize="35sp"
             android:textStyle="bold" />
 
@@ -56,7 +57,8 @@
         android:gravity="center"
         android:text=" ← "
         android:textColor="#FFF"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -83,7 +85,7 @@
                 android:background="@drawable/rounder_cornes_questions1"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="Question?"
+                android:text="Loading..."
                 android:textColor="#696969"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -111,7 +113,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/rounder_cornes_questions1"
                         android:padding="4dp"
-                        android:text="Answer1"
+                        android:text="Loading..."
                         android:textColor="#696969"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -124,7 +126,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/rounder_cornes_questions1"
                         android:padding="4dp"
-                        android:text="Answer3"
+                        android:text="Loading..."
                         android:textColor="#696969"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -148,7 +150,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/rounder_cornes_questions1"
                         android:padding="4dp"
-                        android:text="Answer4"
+                        android:text="Loading..."
                         android:textColor="#696969"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -161,11 +163,10 @@
                         android:layout_weight="1"
                         android:background="@drawable/rounder_cornes_questions1"
                         android:padding="4dp"
-                        android:text="Answer2"
+                        android:text="Loading..."
                         android:textColor="#696969"
                         android:textSize="20sp"
                         android:textStyle="bold" />
-
 
                 </LinearLayout>
             </LinearLayout>

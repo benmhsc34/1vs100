@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#dedede"
+    android:background="@color/colorPrimary"
     tools:context=".StatsActivity">
 
     <RelativeLayout
@@ -35,7 +35,7 @@
             android:background="@drawable/rounder_cornes_questions"
             android:gravity="center"
             android:text="Statistics"
-            android:textColor="#f12"
+            android:textColor="@color/colorPrimary"
             android:textSize="35sp"
             android:textStyle="bold" />
 
@@ -59,94 +59,115 @@
         android:textColor="#FFF"
         android:textSize="30sp" />
 
-    <LinearLayout
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/numberOfWinsLL"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/cardViewGeneralStyle"
         android:layout_below="@+id/toolbarRL"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:weightSum="4">
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:contentPadding="10dp">
 
-        <TextView
-            android:id="@+id/numberOfWinsTV"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Number of Wins"
-            android:textColor="@color/colorPrimary"
-            android:textSize="30sp" />
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <TextView
-            android:id="@+id/numberOfWinsNumberTV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="12"
-            android:textColor="@color/colorAccent"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/numberOfWinsTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Number of Wins"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp" />
 
-    <LinearLayout
+            <TextView
+                android:id="@+id/numberOfWinsNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/numberOfGamesLL"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/cardViewGeneralStyle"
         android:layout_below="@+id/numberOfWinsLL"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:weightSum="4">
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:contentPadding="10dp">
 
-        <TextView
-            android:id="@+id/numberOfgamesTV"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Number of Games"
-            android:textColor="@color/colorPrimary"
-            android:textSize="30sp" />
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="5">
 
-        <TextView
-            android:id="@+id/numberOfGamesNumberTV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="12"
-            android:textColor="@color/colorAccent"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/numberOfgamesTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Number of Games"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp" />
 
-    <LinearLayout
+            <TextView
+                android:id="@+id/numberOfGamesNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/bestPositionLL"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/cardViewGeneralStyle"
         android:layout_below="@+id/numberOfGamesLL"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:weightSum="4">
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:contentPadding="10dp">
 
-        <TextView
-            android:id="@+id/bestPositionTV"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Best position"
-            android:textColor="@color/colorPrimary"
-            android:textSize="30sp" />
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="5">
 
-        <TextView
-            android:id="@+id/bestPositionNumberTV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="#12"
-            android:textColor="@color/colorAccent"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/bestPositionTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Best position"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp" />
 
+            <TextView
+                android:id="@+id/bestPositionNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="#12"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </RelativeLayout>

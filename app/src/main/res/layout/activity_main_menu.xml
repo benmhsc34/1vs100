@@ -12,26 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/relativeLayoutSettings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/ic_settings_blue" />
-        </RelativeLayout>
 
         <ImageView
             android:id="@+id/bigLogo"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:layout_below="@id/relativeLayoutSettings"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
             android:src="@drawable/logo" />
 
         <TextView
@@ -54,8 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/bigLogo"
             android:layout_marginTop="35dp"
-            android:paddingLeft="55dp"
-            android:paddingRight="55dp">
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp">
 
             <Button
                 android:id="@+id/playButton"
@@ -64,7 +51,7 @@
                 android:background="@drawable/rounder_cornes_questions_logo"
                 android:fontFamily="@font/lato"
                 android:text="START"
-                android:textColor="#c11c10"
+                android:textColor="@color/colorPrimary"
                 android:textSize="60sp" />
         </LinearLayout>
 
@@ -74,17 +61,18 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/playButtonLL"
             android:layout_marginTop="5dp"
-            android:paddingLeft="55dp"
-            android:paddingRight="55dp">
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp">
 
             <Button
                 android:id="@+id/statsButton"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="90dp"
                 android:background="@drawable/rounder_cornes_questions_logo"
                 android:fontFamily="@font/lato"
+                android:padding="15dp"
                 android:text="Statistics"
-                android:textColor="#c11c10"
+                android:textColor="@color/colorPrimary"
                 android:textSize="30sp" />
         </LinearLayout>
 
@@ -93,30 +81,34 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/statsButtonLL"
             android:layout_marginTop="5dp"
-            android:paddingLeft="55dp"
-            android:paddingRight="55dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
             android:weightSum="2">
 
             <Button
+                android:id="@+id/moreAppsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginRight="2dp"
+                android:layout_marginEnd="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/rounder_cornes_questions_logo"
                 android:fontFamily="@font/lato"
                 android:text="More Apps"
-                android:textColor="#c11c10"
+                android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
             <Button
+                android:id="@+id/rateUsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/rounder_cornes_questions_logo"
                 android:fontFamily="@font/lato"
                 android:text="Rate us"
-                android:textColor="#c11c10"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
         </LinearLayout>
